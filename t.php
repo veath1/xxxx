@@ -1,5 +1,5 @@
 <?php
-$command = './readflag > out.txt';
+$command = '/readflag > /var/www/html/data/out.txt';
 exec($command, $output, $returnCode);
 
 if ($returnCode === 0) {
