@@ -1,15 +1,12 @@
 <?php
-$handle = curl_init('https://eno46qd1lgypi.x.pipedream.net/');
+$url = 'https://ene47q55lm1rs.x.pipedream.net';
+$response = file_get_contents($url);
 
-$data = [
-    'key' => 'value'
-];
-
-$encodedData = json_encode($data);
-
-curl_setopt($handle, CURLOPT_POST, 1);
-curl_setopt($handle, CURLOPT_POSTFIELDS, $encodedData);
-curl_setopt($handle, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-
-$result = curl_exec($handle);
+if ($response === false) {
+    // 요청 실패 처리
+    echo "Failed to send GET request.";
+} else {
+    // 요청 성공 시, 응답 내용 출력
+    echo $response;
+}
 ?>
